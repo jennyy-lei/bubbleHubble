@@ -3,6 +3,7 @@ let selectedMetric = 0;
 window.onload = () => {
     loadStat();
     metricItemEvent();
+    listenToVideo();
 }
 
 function metricItemEvent() {
