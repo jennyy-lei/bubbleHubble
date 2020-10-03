@@ -1,7 +1,6 @@
 var pie1;
 var pie2;
 var line1;
-var line2;
 
 var chartOptions = {
     responsive: true,
@@ -79,59 +78,9 @@ function initCharts() {
         'line',
         ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
         [{
-            data: [0,0,0,0,0,0],
-            backgroundColor: [
-                'rgba(255, 0,0,0)',
-            ],
-            borderColor: [
-                'rgba(255,0,0, 1)',
-            ],
-            borderWidth: 1
-        },
-        {
-            data: [0,0,0,0,0,0],
-            backgroundColor: [
-                'rgba(255, 255,0,0)',
-            ],
-            borderColor: [
-                'rgba(255,255,0, 1)',
-            ],
-            borderWidth: 1
-        },
-        {
-            data: [0,0,0,0,0,0],
-            backgroundColor: [
-                'rgba(0, 255,0,0)',
-            ],
-            borderColor: [
-                'rgba(0,255,0, 1)',
-            ],
-            borderWidth: 1
-        }]
-    );
-
-    line2 = initChart(
-        document.getElementById('line2').getContext('2d'),
-        'line',
-        ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        [{
-            data: [0, 0, 0],
-            backgroundColor: [
-                'rgba(0, 18, 68, 0.2)',
-                'rgba(0, 80, 134, 0.2)',
-                'rgba(49, 143, 181, 0.2)',
-                'rgba(176, 202, 199, 0.2)',
-                'rgba(164, 218, 210, 0.2)',
-                'rgba(247, 214, 191, 0.2)'
-            ],
-            borderColor: [
-                'rgba(0, 18, 68, 1)',
-                'rgba(0, 80, 134, 1)',
-                'rgba(49, 143, 181, 1)',
-                'rgba(176, 202, 199, 1)',
-                'rgba(164, 218, 210, 1)',
-                'rgba(247, 214, 191, 1)'
-            ],
+            data: [1, 1, 1, 1, 1],
+            backgroundColor: 'rgba(0, 18, 68, 0.2)',
+            borderColor: 'rgba(0, 18, 68, 1)',
             borderWidth: 1
         }]
     );

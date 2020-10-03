@@ -1,10 +1,6 @@
-let selectedMetric = 0;
-
 window.onload = () => {
     metricItemEvent();
-
     initCharts();
-
     listenToVideo();
 }
 
