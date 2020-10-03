@@ -47,7 +47,7 @@ function loadStat(type = 1) {
     </div>`;
 
     if (type == 1)
-        loadStat1();
+        loadStat1(2, 3, 5);
     else if (type == 2)
         loadStat2();
 }

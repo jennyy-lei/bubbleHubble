@@ -1,0 +1,20 @@
+[
+    {
+        "timestamp": 0,
+        "low": 1,
+        "med": 2,
+        "hi": 3
+    },
+    {
+        "timestamp": 5,
+        "low": 4,
+        "med": 7,
+        "hi": 11
+    },
+    {
+        "timestamp": 10,
+        "low": 3,
+        "med": 9,
+        "hi": 2
+    }
+]
