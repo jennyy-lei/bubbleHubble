@@ -1,0 +1,66 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+
+    --divider: 70%;
+    --headerHeight: 80px;
+}
+
+#header {
+    background-color: #001244 ;
+    height: var(--headerHeight);
+    display: flex;
+    align-items: center;
+    padding: 0 2em;
+    box-sizing: border-box;
+
+}
+
+#section-wrapper {
+    height: calc(100% - var(--headerHeight));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.section {
+    background-color:#001244;
+    width: 5%;
+    border-radius: 0px 5px 5px 0px;
+    color: white;
+    text-align: right;
+    font-weight: bold;
+    padding-right: 1rem;
+}
+
+#feeds-section {
+    height: calc(var(--divider) - 3em);
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.25); 
+}
+
+.feeds{
+
+}
+
+.feed-sample{
+    margin:3rem;
+    height: 200px;
+    width: 350px;
+    background-color: red;
+    float: left;
+}
+
+#add-feed-button{
+        border-radius: 50%;
+        width: 75px;
+        height: 75px;
+        background: white;
+        box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.25); 
+        position: fixed;
+        bottom: 1.5rem;
+        right: 1.5rem;
+}
