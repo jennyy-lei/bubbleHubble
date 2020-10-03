@@ -49,7 +49,7 @@ function loadStat(type = 1) {
     if (type == 1)
         loadStat1(2, 3, 5);
     else if (type == 2)
-        loadStat2();
+        loadStat2([0,0,0,0,0,0]);
 }
 
 function loadLog() {
