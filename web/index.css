@@ -41,6 +41,7 @@ html, body {
 
 #metrics-section {
     height: calc(100% - var(--divider) - 3em);
+    display: flex;
 }
 
 .section-name {
@@ -59,7 +60,7 @@ html, body {
     padding: 0;
     margin-top: 3em;
     margin-left: 2em;
-    float: left;
+    width: 120px;
 }
 
 #metrics-list > li {
@@ -72,4 +73,23 @@ html, body {
 
 #metrics-list > li:hover, #metrics-list > .selected {
     color: rgb(var(--dark-blue));
+}
+
+#metrics-content {
+    height: 100%;
+    width: 100px;
+    padding: 1.5em;
+    box-sizing: border-box;
+    display: flex;
+    flex: 1;
+    justify-content: space-evenly;
+}
+
+#metrics-content > .chart-wrapper {
+    display: flex;
+}
+
+#metrics-content > .chart-wrapper > .chart {
+    width: 150px;
+    margin-right: 1.5em;
 }

@@ -34,9 +34,32 @@
                 <li>Stat 2</li>
                 <li>Logs</li>
             </ul>
+
+            <div id="metrics-content">
+                <div class="chart-wrapper">
+                    <div class="chart">
+                        <canvas id="chart1" width="100" height="50"></canvas>
+                    </div>
+                    <div>
+                        <p class="chart-title">Chart 1</p>
+                        <p>Legend...</p>
+                    </div>
+                </div>
+
+                <div class="chart-wrapper">
+                    <div class="chart">
+                        <canvas id="chart2" width="100" height="50"></canvas>
+                    </div>
+                    <div>
+                        <p class="chart-title">Chart 2</p>
+                        <p>Legend...</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
+    <script src="node_modules/chart.js/dist/Chart.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
