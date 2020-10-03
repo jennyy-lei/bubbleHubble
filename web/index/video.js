@@ -1,4 +1,3 @@
-
 function listenToVideo() {
     document.getElementById("video").addEventListener("timeupdate", function() {
         console.log(this.currentTime);

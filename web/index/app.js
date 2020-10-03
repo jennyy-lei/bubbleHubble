@@ -1,61 +1,26 @@
 let selectedMetric = 0;
 
 window.onload = () => {
-    loadStat();
     metricItemEvent();
+
+    initCharts();
+
     listenToVideo();
 }
 
 function metricItemEvent() {
-    let items = document.getElementById('metrics-list').children;
+    let navItems = document.getElementById('metrics-list').children;
+    let metricTabs = document.getElementsByClassName('metric');
 
-    for (let i = 0; i < items.length; ++i) {
-        items[i].onclick = function() {
-            for (let e = 0; e < items.length; ++e) items[e].classList.remove("selected");
-
-            items[i].classList.add("selected");
-
-            if (i == 0 || i == 1) {
-                loadStat(i + 1);
-            } else {
-                loadLog();
+    for (let i = 0; i < navItems.length; ++i) {
+        navItems[i].onclick = function() {
+            for (let e = 0; e < navItems.length; ++e) {
+                navItems[e].classList.remove("selected");
+                metricTabs[e].classList.remove("selected");
             }
+
+            navItems[i].classList.add("selected");
+            metricTabs[i].classList.add("selected");
         }
     }
-}
-
-function loadStat(type = 1) {
-    document.getElementById('metrics-content').innerHTML = `
-    <div class="chart-wrapper">
-        <div class="chart">
-            <canvas id="chart1" width="100" height="50"></canvas>
-        </div>
-        <div>
-            <p class="chart-title">Chart 1</p>
-            <p>Legend...</p>
-        </div>
-    </div>
-
-    <div class="chart-wrapper">
-        <div class="chart">
-            <canvas id="chart2" width="100" height="50"></canvas>
-        </div>
-        <div>
-            <p class="chart-title">Chart 2</p>
-            <p>Legend...</p>
-        </div>
-    </div>`;
-
-    if (type == 1)
-        loadStat1(2, 3, 5);
-    else if (type == 2)
-        loadStat2([0,0,0,0,0,0]);
-}
-
-function loadLog() {
-    document.getElementById('metrics-content').innerHTML = `
-    <div id="log-wrapper">
-        <p>Logs</p>
-        <p>...</p>
-    </div>`
 }

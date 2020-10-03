@@ -81,21 +81,30 @@ html, body {
     border-left: 3px solid rgb(var(--dark-blue));
 }
 
+.metric {
+    display: none;
+    flex: 1;
+    height: 100%;
+}
+
+#metrics-content .selected {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 #metrics-content {
     height: 100%;
     width: 100px;
     padding: 1.5em;
     box-sizing: border-box;
-    display: flex;
     flex: 1;
-    justify-content: space-evenly;
 }
 
-#metrics-content > .chart-wrapper {
+#metrics-content .chart-wrapper {
     display: flex;
 }
 
-#metrics-content > .chart-wrapper > .chart {
+#metrics-content .chart-wrapper > .chart {
     width: 150px;
     margin-right: 1.5em;
 }
