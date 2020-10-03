@@ -3,21 +3,6 @@
     font-weight: 300;
 }
 
-html, body {
-    padding: 0;
-    margin: 0;
-    background-color: #F1F1F1;
-}
-
-#header {
-    background-color: white;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    padding: 0 2em;
-    box-sizing: border-box;
-}
-
 #logo {
     display: flex;
     align-items: center;
