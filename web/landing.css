@@ -7,24 +7,30 @@ html, body {
 
 h2 {
   text-align: center;
+  margin: 1.5em;
 }
 
 input, button {
   width: 100%;
   padding: 12px 20px;
   border-radius: 5px;
-  margin: 8px 0;
+  margin: 10px 0;
   box-sizing: border-box;
   font-size: 1em;
 }
 
+input[type=text] {
+  margin-top: 0;
+}
+
 input[type=text], input[type=password] {
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
+  background-color: #F1F1F1;
+  border: none
 }
 
 label {
   line-height: 1.5em;
-  text-align: center;
 }
 
 label[for="psw"] {
@@ -37,6 +43,8 @@ button {
   border: none;
   cursor: pointer;
   transition: 0.1s;
+  letter-spacing: 1px;
+  font-weight: normal;
 }
 
 button:hover {
