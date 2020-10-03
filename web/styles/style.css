@@ -1,6 +1,9 @@
 * {
+    --dark-blue: 0, 18, 64;
+
     font-family: 'Roboto';
     font-weight: 300;
+    color: rgb(var(--dark-blue));
 }
 
 #logo {
