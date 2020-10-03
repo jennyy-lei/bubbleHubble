@@ -56,6 +56,5 @@ function loadLog() {
     <div id="log-wrapper">
         <p>Logs</p>
         <p>...</p>
-    </div>
-    `
+    </div>`
 }
