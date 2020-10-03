@@ -4,42 +4,40 @@
     <link rel="stylesheet" href="styles/fonts.css" />
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="landing.css" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-    
-
-</style>
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bubble Hubble - Login</title>
+    <link rel="icon" href="assets/logo.png" />
+  </head>
 <body>
-
+  
+<div id="wrapper">  
 <div id="header">
     <div id="logo">
         <img id="logo-img" src="assets/logo.png" alt="logo" />
-        <p id="logo-name">Bubble Hubble</p>
+        <p id="logo-name">Bubble<br>Hubble</p>
     </div>
 </div>
-  
-<div class="title">
-      <div class="imgcontainer">
-        <img src="assets/humans.png" alt="Avatar" class="avatar">
-      </div>
+
+<div class="imgcontainer">
+  <img src="assets/humans.png" alt="Avatar" class="avatar">
 </div>
 
 <form action="/action_page.php" method="post">
 
-  <center><div class="container">
+  <div class="container">
     <h2>Login</h2>
     <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
+    <input type="text" placeholder="Username" name="uname" required>
 
     <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <input type="password" placeholder="Password" name="psw" required>
     
 
     <button onclick="window.location.href='index/index.html'">Login</button>
-  </div></center>
+  </div>
 
 </form>
+</div>
 
 </body>
 </html>
