@@ -93,3 +93,7 @@ html, body {
     width: 150px;
     margin-right: 1.5em;
 }
+
+#log-wrapper {
+    width: 100%;
+}
