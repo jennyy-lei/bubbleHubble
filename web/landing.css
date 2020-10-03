@@ -51,6 +51,14 @@ span.psw {
   padding-top: 16px;
 }
 
+#header {
+  background-color: white;
+  height: 100;
+  display: flex;
+  align-items: center;
+  padding: 25px 50px 0px 50px;
+  box-sizing: border-box;
+}
 
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
