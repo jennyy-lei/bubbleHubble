@@ -1,7 +1,7 @@
 html, body {
     padding: 0;
     margin: 0;
-    background-color: white;
+    background-color: #F1F1F1;
     height: 100%;
     width: 100%;
 
@@ -20,13 +20,15 @@ html, body {
 }
 
 #content-wrapper {
-    width: 75%;
+    height: calc(100% - var(--headerHeight) - 2em);
+    width: 85%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    margin: 0 auto;
+    margin: 1em auto;
 }
+
 .section {
     background-color: white;
     position: relative;
@@ -35,8 +37,7 @@ html, body {
 }
 
 #feeds-section {
-    height: calc(var(--divider) - 3em);
-    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.25); 
+    height: 100%;
 }
 
 .section-name {
@@ -51,22 +52,35 @@ html, body {
     text-align: center;
 }
 
+.feeds {
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .feed-sample{
-    margin:3rem;
-    height: 200px;
-    width: 350px;
-    background-color: gray;
+    margin: 2em;
+    height: 150px;
+    flex-basis: 250px;
+    background-color: #B0CAC7;
     border-radius: 5px;
     float: left;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.feed-sample:hover {
+    opacity: 0.8;
 }
 
 #add-feed-button{
-        border-radius: 50%;
-        width: 75px;
-        height: 75px;
-        background: white;
-        box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.25); 
-        position: fixed;
-        bottom: 1.5rem;
-        right: 1.5rem;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    background: white;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.25); 
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
 }

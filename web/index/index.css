@@ -19,13 +19,13 @@ html, body {
 }
 
 #content-wrapper {
-    height: calc(100% - var(--headerHeight));
+    height: calc(100% - var(--headerHeight) - 2em);
     width: 85%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
-    margin: 0 auto;
+    margin: 1em auto;
 }
 
 .section {
