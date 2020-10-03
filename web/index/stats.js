@@ -1,20 +1,24 @@
-function loadStat1(low, med, hi) {
+
+var pie1;
+var pie2;
+
+function loadStat1(safe, low, high) {
     var ctx1 = document.getElementById('chart1').getContext('2d');
-    var chart1 = new Chart(ctx1, {
+    pie1 = new Chart(ctx1, {
         type: 'doughnut',
         data: {
-            labels: ['High Risk', 'Medium Risk', 'Low Risk'],
+            labels: ['Safe', 'Low Risk', 'High Risk'],
             datasets: [{
-                data: [low, med, hi],
+                data: [safe, low, high],
                 backgroundColor: [
-                    'rgba(179, 16, 16, 0.2)',
+                    'rgba(40, 171, 10, 0.2)',
                     'rgba(247, 236, 22, 0.2)',
-                    'rgba(40, 171, 10, 0.2)'
+                    'rgba(179, 16, 16, 0.2)'
                 ],
                 borderColor: [
-                    'rgba(171, 0, 0, 1)',
+                    'rgba(18, 77, 5, 1)',
                     'rgba(245, 212, 0, 1)',
-                    'rgba(18, 77, 5, 1)'
+                    'rgba(171, 0, 0, 1)'
                 ],
                 borderWidth: 1
             }]
@@ -30,7 +34,7 @@ function loadStat1(low, med, hi) {
     });
 
     var ctx2 = document.getElementById('chart2').getContext('2d');
-    var chart2 = new Chart(ctx2, {
+    pie2 = new Chart(ctx2, {
         type: 'doughnut',
         data: {
             labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
