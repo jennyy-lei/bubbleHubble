@@ -27,7 +27,7 @@ function callApi() {
         
         // // console.log(data[currTime]["safe"]);
         updateGraph(pie1, [high, low, safe]);
-        // // updateGraph(line1,[1,2,3,4,5,6]);
+        updateGraph(line1,[1,2,3,4,5,6]);
         // // line1.data.datasets[0].data.push(dataNew[i]);
         // // line1.data.datasets[1].data.push(dataNew[i]);
         // // line1.data.datasets[2].data.push(dataNew[i]);
