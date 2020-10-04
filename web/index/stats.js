@@ -1,5 +1,4 @@
 var pie1;
-var pie2;
 var line1;
 
 var chartOptions = (generateList) => {
@@ -59,7 +58,7 @@ function initCharts() {
         pieData(3, 2, 1),
         chartOptions((chart) => {
             var str = '';
-            for (var i=0; i<chart.data.datasets[0].data.length; ++i) {
+            for (var i=0; i<3; ++i) {
                 str += `
                 <li>
                     <span style="
@@ -73,33 +72,6 @@ function initCharts() {
         })
     );
     document.getElementById('pie1-legend').innerHTML = pie1.generateLegend();
-
-    pie2 = initChart(
-        document.getElementById('pie2').getContext('2d'),
-        'doughnut',
-        ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        [{
-            data: [1, 1, 1],
-            backgroundColor: [
-                'rgba(0, 18, 68, 0.2)',
-                'rgba(0, 80, 134, 0.2)',
-                'rgba(49, 143, 181, 0.2)',
-                'rgba(176, 202, 199, 0.2)',
-                'rgba(164, 218, 210, 0.2)',
-                'rgba(247, 214, 191, 0.2)'
-            ],
-            borderColor: [
-                'rgba(0, 18, 68, 1)',
-                'rgba(0, 80, 134, 1)',
-                'rgba(49, 143, 181, 1)',
-                'rgba(176, 202, 199, 1)',
-                'rgba(164, 218, 210, 1)',
-                'rgba(247, 214, 191, 1)'
-            ],
-            borderWidth: 1
-        }],
-        chartOptions(false)
-    );
     
     line1 = initChart(
         document.getElementById('line1').getContext('2d'),
