@@ -1,48 +1,42 @@
+function callApi() {
+    console.log("calling api!");
 
-function listenToVideo() {
-    document.getElementById("video").addEventListener("timeupdate", function() {
-        console.log(this.currentTime);
+    const interval = setInterval(function() {
+        call();
+    }, 3000);
 
-        var currTime = Math.floor((this.currentTime+1)/5)*5;
-        console.log(currTime);
-        var safe = testVidData[currTime / 5]["safe"];
-        var low = testVidData[currTime / 5]["low"];
-        var high = testVidData[currTime / 5]["high"];
-         
-        console.log(testVidData[currTime / 5]["safe"]);
-        updateGraph(pie1, [safe, low, high],0);
+    clearInterval(interval);
 
-        var updatedData1 = line1.data.datasets[0].data
-        updatedData1.push(high);
-        updateGraph(line1,updatedData1,0)
+    function call() {
+        fetch("http://52.139.37.93:7777/api")
+        .then(response => {
+        //     return response.json();
+        // })
+        // .then(json => {
+            console.log(response);
+        });
 
-        var updatedData2 = line1.data.datasets[1].data
-        updatedData2.push(low);
-        updateGraph(line1,updatedData2,1)
+        document.getElementById("camera").addEventListener("timeupdate", function() {
+            console.log(this.currentTime);
 
-        var updatedData3 = line1.data.datasets[2].data
-        updatedData3.push(safe);
-        updateGraph(line1,updatedData3,2)
-    })
-}
+            // var currTime = Math.floor((this.currentTime+1)/5)*5;
+            // var currTime = Math.floor(this.currentTime);
+            // console.log(data[currTime]);
+            // var safe = data[currTime]["safe"];
+            // var low = data[currTime]["low"];
+            // var high = data[currTime]["high"];
+            
+            // // console.log(data[currTime]["safe"]);
+            // updateGraph(pie1, [[high, low, safe]]);
+            // // updateGraph(line1,[1,2,3,4,5,6]);
+            // // line1.data.datasets[0].data.push(dataNew[i]);
+            // // line1.data.datasets[1].data.push(dataNew[i]);
+            // // line1.data.datasets[2].data.push(dataNew[i]);
+            // // line1.data.labels
+            // // updateGraph(line1, []);
 
-const testVidData = [
-    {
-        "timestamp": 0,
-        "safe": 1,
-        "low": 2,
-        "high": 3
-    },
-    {
-        "timestamp": 5,
-        "safe": 4,
-        "low": 7,
-        "high": 11
-    },
-    {
-        "timestamp": 10,
-        "safe": 3,
-        "low": 9,
-        "high": 2
+            // document.getElementById('pie1-legend').innerHTML = pie1.generateLegend();
+            // document.getElementById('line1-legend').innerHTML = line1.generateLegend();
+        });
     }
-]
+}
