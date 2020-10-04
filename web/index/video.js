@@ -1,3 +1,4 @@
+
 function listenToVideo() {
     document.getElementById("video").addEventListener("timeupdate", function() {
         console.log(this.currentTime);
@@ -9,8 +10,19 @@ function listenToVideo() {
         var high = testVidData[currTime / 5]["high"];
          
         console.log(testVidData[currTime / 5]["safe"]);
-        updateGraph(pie1, [safe, low, high]);
-        updateGraph(line1,[1,2,3,4,5,6]);
+        updateGraph(pie1, [safe, low, high],0);
+
+        var updatedData1 = line1.data.datasets[0].data
+        updatedData1.push(high);
+        updateGraph(line1,updatedData1,0)
+
+        var updatedData2 = line1.data.datasets[1].data
+        updatedData2.push(low);
+        updateGraph(line1,updatedData2,1)
+
+        var updatedData3 = line1.data.datasets[2].data
+        updatedData3.push(safe);
+        updateGraph(line1,updatedData3,2)
     })
 }
 

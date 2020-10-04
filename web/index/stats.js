@@ -77,9 +77,9 @@ function initCharts() {
     line1 = initChart(
         document.getElementById('line1').getContext('2d'),
         'line',
-        ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        ['1','2','3','4'],
         [{
-            data: [0,0,0,0,0,0],
+            data: [0],
             backgroundColor: [
                 'rgba(255, 0,0,0)',
             ],
@@ -89,7 +89,7 @@ function initCharts() {
             borderWidth: 1
         },
         {
-            data: [0,0,0,0,0,0],
+            data: [0],
             backgroundColor: [
                 'rgba(255, 255,0,0)',
             ],
@@ -99,7 +99,7 @@ function initCharts() {
             borderWidth: 1
         },
         {
-            data: [0,0,0,0,0,0],
+            data: [0],
             backgroundColor: [
                 'rgba(0, 255,0,0)',
             ],
@@ -137,7 +137,7 @@ function initCharts() {
     );
 }
 
-function updateGraph(graph,dataNew){
-    graph.data.datasets[0].data = dataNew;
+function updateGraph(graph,dataNew,i){
+    graph.data.datasets[i].data = dataNew;
     graph.update(0);
 }
