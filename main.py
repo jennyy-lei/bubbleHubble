@@ -3,7 +3,7 @@ import numpy as np
 import time
 import argparse
 
-import utills, plot
+import utils, plot
 
 confid = 0.5
 thresh = 0.5
