@@ -76,22 +76,21 @@ function initCharts() {
     line1 = initChart(
         document.getElementById('line1').getContext('2d'),
         'line',
-        ['1','2','3','4'],
+        ['1','2','3','4','1','2','3','4','1','2','3','4','1','2','3','4'],
         [{
             data: [0],
             borderColor: 'rgba(255, 0,0, 1)',
             borderWidth: 1
-        }],
-        [{
-            data: [0],
-            borderColor: 'rgba(255, 255, 0, 1)',
-            borderWidth: 1
-        }],
-        [{
-            data: [0],
-            borderColor: 'rgba(0, 255,0, 1)',
-            borderWidth: 1
-        }]
+        },
+    {
+        data: [0],
+        borderColor: 'rgba(255, 255,0, 1)',
+        borderWidth: 1
+    },{
+        data: [0],
+        borderColor: 'rgba(0, 255,0, 1)',
+        borderWidth: 1
+    }],
     );
 }
 
