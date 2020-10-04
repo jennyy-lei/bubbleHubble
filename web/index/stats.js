@@ -81,16 +81,19 @@ function initCharts() {
             label: 'High Risk',
             data: [1, 1, 1, 1, 1],
             borderColor: 'rgba(255, 0, 0, 1)',
+            backgroundColor:'rgba(0, 0, 0, 0)',
             borderWidth: 1
         },{
             label: 'Medium Risk',
             data: [2, 2, 2, 2, 2],
             borderColor: 'rgba(255, 255, 0, 1)',
+            backgroundColor:'rgba(0, 0, 0, 0)',
             borderWidth: 1
         },{
             label: 'Safe',
             data: [0, 0, 0, 0, 0],
             borderColor: 'rgba(0, 255, 0, 1)',
+            backgroundColor:'rgba(0, 0, 0, 0)',
             borderWidth: 1
         }
     ],
