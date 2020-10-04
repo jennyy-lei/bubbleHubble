@@ -62,6 +62,15 @@ img.avatar {
 
 form {
   width: 30%;
+  position: relative;
+}
+
+#form-error {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(200%);
+  color: red;
+  text-align: center;
 }
 
 .container {
