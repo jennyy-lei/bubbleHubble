@@ -76,7 +76,7 @@ function initCharts() {
     line1 = initChart(
         document.getElementById('line1').getContext('2d'),
         'line',
-        [0, 1, 3, 4, 5,7,9,11,13,15,17,19,21,23,25],
+        [0, 2, 4, 4, 6,8,10],
         [{
             label: 'High Risk',
             data: [1, 1, 1, 1, 1],

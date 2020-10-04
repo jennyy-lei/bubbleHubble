@@ -26,9 +26,9 @@ function callApi() {
         var high = json["high"];
         
         if (!high && !low && !safe)
-            updateGraph(pie1, [high, low, safe, 1e-11]);
+            updateGraph(pie1, [high, low, safe, 1e-11],0);
         else
-            updateGraph(pie1, [high, low, safe]);
+            updateGraph(pie1, [high, low, safe],0);
         // // updateGraph(line1,[1,2,3,4,5,6]);
         //line1.data.datasets[0].data.push(high);
         //line1.data.datasets[1].data.push(low);
@@ -36,14 +36,17 @@ function callApi() {
         // // line1.data.labels
         console.log(high, low, safe)
         var temp = line1.data.datasets[0].data
+        temp = temp.slice(1,temp.length)
         temp.push(high)
         updateGraph(line1,temp,0);
 
         var temp2 = line1.data.datasets[1].data
+        temp2 = temp2.slice(1,temp.length)
         temp.push(low)
-        updateGraph(line1,temp2,1);
+        updateGraph(line1,temp2,1); 
 
         var temp3 = line1.data.datasets[2].data
+        temp3 = temp3.slice(1,temp.length)
         temp.push(safe)
         updateGraph(line1,temp3,2);
 
