@@ -30,9 +30,9 @@ function callApi() {
         else
             updateGraph(pie1, [high, low, safe]);
         // // updateGraph(line1,[1,2,3,4,5,6]);
-        // // line1.data.datasets[0].data.push(dataNew[i]);
-        // // line1.data.datasets[1].data.push(dataNew[i]);
-        // // line1.data.datasets[2].data.push(dataNew[i]);
+        //line1.data.datasets[0].data.push(high);
+        //line1.data.datasets[1].data.push(low);
+        //line1.data.datasets[2].data.push(safe);
         // // line1.data.labels
         // // updateGraph(line1, []);
 
