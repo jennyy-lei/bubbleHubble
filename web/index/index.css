@@ -119,7 +119,8 @@ html, body {
     display: flex;
 }
 
-#metrics-content .chart-wrapper > .chart {
+#metrics-content .chart-wrapper > .piechart,
+#metrics-content .chart-wrapper > .linechart {
     width: 150px;
     margin-right: 1.5em;
 }
