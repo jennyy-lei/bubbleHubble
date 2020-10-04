@@ -76,41 +76,51 @@ function initCharts() {
     line1 = initChart(
         document.getElementById('line1').getContext('2d'),
         'line',
-        [0, 2, 4, 6, 8,10],
+        [0, 2, 4, 6, 8, 10, 12, 14],
         [{
             label: 'High Risk',
-            data: [0, 0, 0, 0, 0],
+            data: [0, 0, 0, 0, 0, 0, 0, 0],
             borderColor: 'rgba(179, 16, 16, 1)',
             backgroundColor:'rgba(0, 0, 0, 0)',
             borderWidth: 1
         },{
             label: 'Medium Risk',
-            data: [0, 0, 0, 0, 0],
+            data: [0, 0, 0, 0, 0, 0, 0, 0],
             borderColor: 'rgba(247, 236, 22, 1)',
             backgroundColor:'rgba(0, 0, 0, 0)',
             borderWidth: 1
         },{
             label: 'Safe',
-            data: [0, 1, 1, 0, 0],
+            data: [0, 0, 0, 0, 0, 0, 0, 0],
             borderColor: 'rgba(40, 171, 10, 1)',
             backgroundColor:'rgba(0, 0, 0, 0)',
             borderWidth: 1
         }
         ],
-        chartOptions((chart) => {
-            var color = ['rgba(179, 16, 16, 0.2)', 'rgba(247, 236, 22, 0.2)', 'rgba(40, 171, 10, 0.2)'];
-            var str = '';
-            for (var i=0; i<chart.data.datasets.length; ++i) {
-                str += `
-                <li>
-                    <span style="background-color: ${color[i]};">
-                    ${chart.data.datasets[i].data.length ? chart.data.datasets[i].data[chart.data.datasets[i].data.length - 1] : 0}</span>
-                    ${chart.data.datasets[i].label ? chart.data.datasets[i].label : ''}
-                </li>
-                `;
-            }
-            return str;
-        })
+        {
+            scales: {
+                yAxes: [{
+                    display: true,
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            },
+            ...chartOptions((chart) => {
+                var color = ['rgba(179, 16, 16, 0.2)', 'rgba(247, 236, 22, 0.2)', 'rgba(40, 171, 10, 0.2)'];
+                var str = '';
+                for (var i=0; i<chart.data.datasets.length; ++i) {
+                    str += `
+                    <li>
+                        <span style="background-color: ${color[i]};">
+                        ${chart.data.datasets[i].data.length ? chart.data.datasets[i].data[chart.data.datasets[i].data.length - 1] : 0}</span>
+                        ${chart.data.datasets[i].label ? chart.data.datasets[i].label : ''}
+                    </li>
+                    `;
+                }
+                return str;
+            })
+        }
     );
 }
 
