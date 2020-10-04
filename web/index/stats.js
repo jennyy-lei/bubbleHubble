@@ -76,35 +76,35 @@ function initCharts() {
     line1 = initChart(
         document.getElementById('line1').getContext('2d'),
         'line',
-        [0, 2, 4, 4, 6,8,10],
+        [0, 2, 4, 6, 8,10],
         [{
             label: 'High Risk',
             data: [1, 1, 1, 1, 1],
-            borderColor: 'rgba(255, 0, 0, 1)',
+            borderColor: 'rgba(179, 16, 16, 1)',
             backgroundColor:'rgba(0, 0, 0, 0)',
             borderWidth: 1
         },{
             label: 'Medium Risk',
             data: [2, 2, 2, 2, 2],
-            borderColor: 'rgba(255, 255, 0, 1)',
+            borderColor: 'rgba(247, 236, 22, 1)',
             backgroundColor:'rgba(0, 0, 0, 0)',
             borderWidth: 1
         },{
             label: 'Safe',
             data: [0, 0, 0, 0, 0],
-            borderColor: 'rgba(0, 255, 0, 1)',
+            borderColor: 'rgba(40, 171, 10, 1)',
             backgroundColor:'rgba(0, 0, 0, 0)',
             borderWidth: 1
         }
-    ],
+        ],
         chartOptions((chart) => {
+            var color = ['rgba(179, 16, 16, 0.2)', 'rgba(247, 236, 22, 0.2)', 'rgba(40, 171, 10, 0.2)'];
             var str = '';
-            for (var i=0; i<chart.data.datasets; ++i) {
+            for (var i=0; i<chart.data.datasets.length; ++i) {
                 str += `
                 <li>
-                    <span style="
-                        background-color: ${chart.data.datasets[i].backgroundColor};
-                    ">${chart.data.datasets[i].data[chart.data.datasets[i].data.length - 1]}</span>
+                    <span style="background-color: ${color[i]};">
+                    ${chart.data.datasets[i].data[chart.data.datasets[i].data.length - 1]}</span>
                     ${chart.data.datasets[i].label ? chart.data.datasets[i].label : ''}
                 </li>
                 `
