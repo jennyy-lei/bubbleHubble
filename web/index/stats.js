@@ -79,19 +79,19 @@ function initCharts() {
         [0, 2, 4, 6, 8,10],
         [{
             label: 'High Risk',
-            data: [1, 1, 1, 1, 1],
+            data: [0, 0, 0, 0, 0],
             borderColor: 'rgba(179, 16, 16, 1)',
             backgroundColor:'rgba(0, 0, 0, 0)',
             borderWidth: 1
         },{
             label: 'Medium Risk',
-            data: [2, 2, 2, 2, 2],
+            data: [0, 0, 0, 0, 0],
             borderColor: 'rgba(247, 236, 22, 1)',
             backgroundColor:'rgba(0, 0, 0, 0)',
             borderWidth: 1
         },{
             label: 'Safe',
-            data: [0, 0, 0, 0, 0],
+            data: [0, 1, 1, 0, 0],
             borderColor: 'rgba(40, 171, 10, 1)',
             backgroundColor:'rgba(0, 0, 0, 0)',
             borderWidth: 1
@@ -118,3 +118,4 @@ function updateGraph(graph, dataNew,i){
     graph.data.datasets[i].data = dataNew;
     graph.update(0);
 }
+
