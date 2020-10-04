@@ -104,10 +104,10 @@ function initCharts() {
                 str += `
                 <li>
                     <span style="background-color: ${color[i]};">
-                    ${chart.data.datasets[i].data[chart.data.datasets[i].data.length - 1]}</span>
+                    ${chart.data.datasets[i].data.length ? chart.data.datasets[i].data[chart.data.datasets[i].data.length - 1] : 0}</span>
                     ${chart.data.datasets[i].label ? chart.data.datasets[i].label : ''}
                 </li>
-                `
+                `;
             }
             return str;
         })
