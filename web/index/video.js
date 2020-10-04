@@ -31,19 +31,21 @@ function callApi() {
             updateGraph(pie1, [high, low, safe],0);
             
 
+        console.log(safe, low, high)
         var temp = line1.data.datasets[0].data
         temp = temp.slice(1,temp.length)
         temp.push(high)
         updateGraph(line1,temp,0);
 
         var temp2 = line1.data.datasets[1].data
-        temp2 = temp2.slice(1,temp.length)
-        temp.push(low)
+        console.log(temp2)
+        temp2 = temp2.slice(1,temp2.length)
+        temp2.push(low)
         updateGraph(line1,temp2,1); 
 
         var temp3 = line1.data.datasets[2].data
-        temp3 = temp3.slice(1,temp.length)
-        temp.push(safe)
+        temp3 = temp3.slice(1,temp3.length)
+        temp3.push(safe)
         updateGraph(line1,temp3,2);
 
         newLabels = line1.data.labels;  
