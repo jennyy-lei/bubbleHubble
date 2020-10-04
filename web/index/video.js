@@ -13,8 +13,8 @@ function callApi() {
         .then(json => {
             callback(json);
         })
-        .catch(e =>{
-            console.log('Connection Refused')
+        .catch(e => {
+            console.log(e);
         });
     }
 
@@ -26,9 +26,9 @@ function callApi() {
         var high = json["high"];
         
         if (!high && !low && !safe)
-            updateGraph(pie1, [high, low, safe, 1e-11]);
+            updateGraph(pie1, [high, low, safe, 1e-11],0);
         else
-            updateGraph(pie1, [high, low, safe]);
+            updateGraph(pie1, [high, low, safe],0);
         // // updateGraph(line1,[1,2,3,4,5,6]);
         //line1.data.datasets[0].data.push(high);
         //line1.data.datasets[1].data.push(low);
