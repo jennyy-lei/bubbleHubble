@@ -29,12 +29,7 @@ function callApi() {
             updateGraph(pie1, [high, low, safe, 1e-11],0);
         else
             updateGraph(pie1, [high, low, safe],0);
-        // // updateGraph(line1,[1,2,3,4,5,6]);
-        //line1.data.datasets[0].data.push(high);
-        //line1.data.datasets[1].data.push(low);
-        //line1.data.datasets[2].data.push(safe);
-        // // line1.data.labels
-        console.log(high, low, safe)
+            
         var temp = line1.data.datasets[0].data
         temp.push(high)
         updateGraph(line1,temp,0);
@@ -47,9 +42,7 @@ function callApi() {
         temp.push(safe)
         updateGraph(line1,temp3,2);
 
-        // // updateGraph(line1, []);
-
         document.getElementById('pie1-legend').innerHTML = pie1.generateLegend();
-        // document.getElementById('line1-legend').innerHTML = line1.generateLegend();
+        document.getElementById('line1-legend').innerHTML = line1.generateLegend();
     }
 }
