@@ -1,10 +1,23 @@
 window.onload = () => {
+    // resize line chart
+    console.log(`${document.getElementById('line1-legend').clientWidth}px`);
+    resizeLineChart()
+
     metricItemEvent();
     initCharts();
 
     if(document.getElementById('camera').complete) {
         callApi();
     }
+}
+
+window.onresize = () => {
+    resizeLineChart();
+    line1.update(0);
+}
+
+function resizeLineChart() {
+    document.getElementsByClassName('linechart')[0].style.width = `${document.getElementById('metrics-content').clientWidth - document.getElementById('line1-legend').clientWidth - 100}px`;
 }
 
 function metricItemEvent() {

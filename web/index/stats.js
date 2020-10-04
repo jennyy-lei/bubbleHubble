@@ -72,7 +72,7 @@ function initCharts() {
         })
     );
     document.getElementById('pie1-legend').innerHTML = pie1.generateLegend();
-    
+
     line1 = initChart(
         document.getElementById('line1').getContext('2d'),
         'line',
