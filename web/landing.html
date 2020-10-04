@@ -22,7 +22,7 @@
   <img src="assets/humans.png" alt="Avatar" class="avatar">
 </div>
 
-<form action="/action_page.php" method="post">
+<form method="post">
 
   <div class="container">
     <h2>Login to Bubble Hubble</h2>
@@ -32,12 +32,34 @@
     <!-- <label for="psw"><b>Password</b></label> -->
     <input type="password" placeholder="Password" name="psw" required>
     
-
-    <button onclick="window.location.href='index/index.html'">Login</button>
+    <button onclick="return login()">Login</button>
   </div>
-
+  <p id="form-error"></p>
 </form>
+
 </div>
+
+<script>
+  function login() {
+    var uname = document.getElementsByName('uname')[0].value;
+    var psw = document.getElementsByName('psw')[0].value;
+    var error = '';
+
+    if (uname && psw) {
+      if (uname == 'username' && psw == 'password') {
+        window.location.href='index/index.html';
+      } else {
+        error = 'Wrong username or password.'
+      }
+    } else {
+      return true;
+    }
+
+    document.getElementById('form-error').innerHTML = error;
+
+    return false;
+  }
+</script>
 
 </body>
 </html>
