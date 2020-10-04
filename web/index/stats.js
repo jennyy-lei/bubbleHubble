@@ -135,9 +135,7 @@ function initCharts() {
     );
 }
 
-function updateGraph(graph,dataNew){
-    for (var i = 0; i < dataNew.length; ++i)
-        graph.data.datasets[i].data = dataNew[i];
-
+function updateGraph(graph, dataNew){
+    graph.data.datasets[0].data = dataNew;
     graph.update(0);
 }

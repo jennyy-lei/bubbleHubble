@@ -6,7 +6,7 @@ function callApi() {
     }, 3000);
 
     function call(callback) {
-        fetch("http://52.139.37.93:7777/api")
+        fetch(`http://52.139.37.93:7777/api`, {cache: 'no-cache'})
         .then(response => {
             return response.json();
         })
@@ -26,7 +26,7 @@ function callApi() {
         var high = json["high"];
         
         // // console.log(data[currTime]["safe"]);
-        updateGraph(pie1, [[high, low, safe]]);
+        updateGraph(pie1, [high, low, safe]);
         // // updateGraph(line1,[1,2,3,4,5,6]);
         // // line1.data.datasets[0].data.push(dataNew[i]);
         // // line1.data.datasets[1].data.push(dataNew[i]);
@@ -34,7 +34,7 @@ function callApi() {
         // // line1.data.labels
         // // updateGraph(line1, []);
 
-        // document.getElementById('pie1-legend').innerHTML = pie1.generateLegend();
+        document.getElementById('pie1-legend').innerHTML = pie1.generateLegend();
         // document.getElementById('line1-legend').innerHTML = line1.generateLegend();
     }
 }

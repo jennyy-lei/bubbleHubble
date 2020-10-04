@@ -23,15 +23,3 @@ function metricItemEvent() {
         }
     }
 }
-
-function readJSON(path, callback) { 
-    var xhr = new XMLHttpRequest(); 
-    xhr.open('GET', path, true); 
-    xhr.responseType = 'blob'; 
-    xhr.onload = function(e) {  
-      if (this.status == 200) { 
-          console.log(this.response);
-      }  
-    } 
-    xhr.send(); 
-}
