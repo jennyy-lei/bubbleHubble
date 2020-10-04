@@ -76,20 +76,27 @@ function initCharts() {
     line1 = initChart(
         document.getElementById('line1').getContext('2d'),
         'line',
-        [0, 1, 3, 4, 5],
+        [0, 1, 3, 4, 5,7,9,11,13,15,17,19,21,23,25],
         [{
             label: 'High Risk',
             data: [1, 1, 1, 1, 1],
-            backgroundColor: 'rgba(179, 16, 16, 0.2)',
-            borderColor: 'rgba(179, 16, 16, 0.1)',
+            borderColor: 'rgba(255, 0, 0, 1)',
+            backgroundColor:'rgba(0, 0, 0, 0)',
             borderWidth: 1
         },{
             label: 'Medium Risk',
-            data: [2, 1, 2, 1, 2],
-            backgroundColor: 'rgba(247, 236, 22, 0.2)',
-            borderColor: 'rgba(247, 236, 22, 0.1)',
+            data: [2, 2, 2, 2, 2],
+            borderColor: 'rgba(255, 255, 0, 1)',
+            backgroundColor:'rgba(0, 0, 0, 0)',
             borderWidth: 1
-        }],
+        },{
+            label: 'Safe',
+            data: [0, 0, 0, 0, 0],
+            borderColor: 'rgba(0, 255, 0, 1)',
+            backgroundColor:'rgba(0, 0, 0, 0)',
+            borderWidth: 1
+        }
+    ],
         chartOptions((chart) => {
             var str = '';
             for (var i=0; i<chart.data.datasets; ++i) {
@@ -107,7 +114,7 @@ function initCharts() {
     );
 }
 
-function updateGraph(graph, dataNew){
-    graph.data.datasets[0].data = dataNew;
+function updateGraph(graph, dataNew,i){
+    graph.data.datasets[i].data = dataNew;
     graph.update(0);
 }
